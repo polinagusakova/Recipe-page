@@ -1,0 +1,158 @@
+/*Global styles*/
+:root {
+    --main: hsl(30, 10%, 34%);
+    --border: hsl(30, 18%, 87%);
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(30, 54%, 90%);
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    padding: 4rem; /*ensure the card doesn't touch the edges on small screens*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    gap: 2rem;
+    color: var(--main);
+}
+
+.container {
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    max-width: 45rem; /*prevent from getting too wide on larger screens*/
+}
+
+/*Style headings*/
+h1 {
+    color: hsl(24, 5%, 18%);
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+}
+
+h2 {
+    color: hsl(14, 45%, 36%);
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.7rem;
+}
+
+h3, .preparation_list>li::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+/*Style elements*/
+p {
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+span {
+    padding-left: 1rem;
+}
+
+hr {
+    margin: 1.5rem 0;
+    border: 1px solid var(--border);
+}
+
+img {
+    border-radius: 10px;
+    display: block;
+    max-width: 100%; /*prevents from overflowing its container*/
+}
+
+/* Preparation, ingredients and instructions section */
+.preparation {
+    background-color: hsl(330, 100%, 98%);
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+li {
+    padding-top: 0.5rem;
+}
+
+.ingredients li {
+    padding-left: 1rem;
+}
+
+.instructions li {
+    line-height: 2rem;
+    padding-left: 1rem;
+}
+
+ul, .instructions {
+    padding-left: 1.5rem; 
+}
+
+.ingredients {
+    list-style-type: square;
+}
+
+.ingredients>li::marker, .instructions>li::marker {
+    color: hsl(332, 51%, 32%);
+    font-weight: bold;
+}
+
+
+/*Nutrition section*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 1rem 0 1rem 2rem;
+}
+
+.bold {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
+.line {
+    border-bottom: 1px solid var(--border);   
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 978px) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        border-radius: 0;
+        padding: 0;       
+    }
+
+    .cont {
+        padding: 1.3rem;
+    }
+
+    img {
+        border-radius: 0;
+        max-width: 100%;
+    }
+    
+    h1 {
+        line-height: 2.5rem;
+    }
+    
+    footer {
+        display: none;
+    }
+}
