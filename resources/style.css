@@ -48,8 +48,16 @@ h2 {
     font-size: 1.7rem;
 }
 
-h3, .preparation_list>li::marker {
+.preparation_header, .preparation_list>li::marker {
     color: hsl(332, 51%, 32%);
+}
+
+.preparation_header {
+    font-size: 1.2rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-weight: bold;
 }
 
 /*Style elements*/
